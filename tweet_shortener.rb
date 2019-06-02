@@ -22,3 +22,18 @@ def word_substituter(tweet)
     end 
   end.join(" ")
 end 
+
+def bulk_tweet_shortner(tweet)
+  tweet.each do |tweet|
+    puts word_substituter(tweet)
+  end 
+end 
+
+def selective_tweet_shortner(tweet)
+  if tweet.length > 140
+    word_substituter(tweet)
+  else 
+    tweet
+  end 
+end 
+
